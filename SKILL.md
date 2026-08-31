@@ -36,6 +36,14 @@ This skill does NOT invent case facts. Every number, stat, or example either com
 
 **4. Produce a review doc — markdown, one pass, not interactive.** Before writing the full PRD, output a short markdown summary (like the "Read First" section from the first run) listing every proposed rename, reweight, flag, and new/dropped section, each with a one-line reason. Present this to the user and wait for their confirmation or edits. Do not generate the docx yet.
 
+   Include a **Recurring-pattern check** block in this same review doc: one line per known recurring mentor-feedback pattern (see list below), stating whether this case's draft is at risk and why, or "no risk flagged" if not applicable.
+   - Interpretation presented as fact (claims not visibly separated from the evidence behind them)
+   - Premature convergence (a conclusion reached without showing why alternatives were ruled out)
+   - Unexplained scoring (a rubric or T-shirt-size scale applied without stating what it measures)
+   - Unprioritized open questions/gaps (a list treated as equally important with no must-validate vs. nice-to-know split)
+   - Solution described as a feature list (missing feature-level flow, edge cases, or failure states)
+   - Problem statement over-justifying itself (defensive validity arguments crowding out who/what/why)
+
 **5. Once confirmed, write the full structured markdown** for the entire PRD (front matter + all sections, in the DSL below), adapting every section's content to the case — same depth as the meta-template's originals, not abbreviated.
 
 **6. Run `scripts/generate_docx.py`** on that markdown to produce the final `.docx`. Save to the output path (default: Downloads), named `PRD Template - <Case Title>.docx`.
@@ -74,6 +82,7 @@ Then read `$env:TEMP\case_text.txt` with the Read tool.
 
 ## Principles carried over from the first build
 
+- **Evidence vs. interpretation stay visibly separate.** Any synthesized claim of the form "the evidence shows X" must be distinguishable from "we read this as meaning Y" — this applies everywhere findings get synthesized (secondary research so-whats, Key Insights, primary research findings, opportunity BECAUSE clauses), not just one section. This was the single most-repeated mentor critique across past cases (same note, same section type, two case studies in a row) — treat it as a standing check on every synthesis paragraph, not a one-section fix.
 - Never invent case facts. Mark invented-shape examples `ILLUSTRATIVE — derive your own`.
 - Discovery weight is not fixed — it depends on whether the problem is given (light discovery, vendor-management-style) or open (heavy discovery, learning-tech-and-AI-style). Diagnose this per case, don't assume.
 - A rubric or sprint length the case doesn't supply gets a placeholder + flag, never a guessed number presented as fact.

@@ -142,17 +142,21 @@ What you can learn without leaving your desk — sized, sourced, interpreted. Ke
 
 ## 5. Existing Tools/Solutions — and the [Job/Seam] They Miss
 
-Show what each category of existing solution does, and the one job none of them finishes.
+Show what each category of existing solution does, the specific players crowding or leaving open ground, and the one job none of them finishes. This section closes with a Key Insights subsection — required, not optional.
 
 **WHAT THIS SECTION COVERS**
 - The categories of tool/solution that already touch this space.
 - What each does well, and where it stops.
+- **Competitor Analysis (required subsection)**: named competitors/products, organised by job-to-be-done or mechanism (not just a feature list), showing where the market is crowded and where it's genuinely open.
+- **Key Insights (required closing subsection)**: the synthesis of §4 + §5 into a small number of dated, evidence-tagged insights — see below.
 - The unfinished job that survives all of them.
 
 **HOW TO BUILD IT**
 - Organise by job-to-be-done, not by brand.
+- For Competitor Analysis: compare underlying mechanism, not surface features — "every player follows a staff-led, top-down model" is a stronger finding than a feature checklist.
 - For each category, name the unfinished job in one line — it points at the MVP wedge.
 - Resist rating by features; rate by whether the outcome actually gets closer end-to-end.
+- For Key Insights: write each insight as evidence, then interpretation — first state what the research shows, then, on a visibly separate clause or line, state what the team believes it means. Don't let the interpretation get written as if it were the finding itself. This is the single most-repeated mentor critique across past cases — hold this section to it more than any other.
 
 **EXAMPLE · THIS CASE** — `ILLUSTRATIVE — derive your own.`
 
@@ -160,6 +164,8 @@ Show what each category of existing solution does, and the one job none of them 
 - If so many solutions exist, why does the problem persist? Answer honestly — it's the crux of the case.
 - Which job is every current solution failing to finish end-to-end?
 - Are existing tools failing, or solving a different job than the one you care about?
+- For Competitor Analysis: did you compare mechanism, or just list feature tables?
+- For Key Insights: for each insight, can you point to which sentence is the evidence and which is the interpretation? If a reader can't tell them apart, rewrite it.
 
 ---
 
@@ -176,19 +182,22 @@ Diagnose this explicitly per case: if the problem is GIVEN, research is lighter 
 - Who you spoke to, how many, how you reached them.
 - What you asked, aimed at the mode you diagnosed above.
 - What you heard/saw, with a SAW/THINK/ASSUME split, and what would change your MVP.
+- **Research Gaps & Prioritized Open Questions (required closing subsection)**: what's still unvalidated after primary research, split into "must validate before moving ahead" vs. "good to explore later" — not a flat list.
 
 **HOW TO BUILD IT**
 - Table it: Segment/Function (n=) | Method | What we heard/saw | Saw/Think/Assume.
 - Anchor every interview on a specific real instance.
 - Ask a consistent closing question across interviews; the overlap in answers is your MVP signal.
 - Decide in advance what finding would kill your favourite idea — then look for it.
+- For Research Gaps: list every open question or unvalidated assumption, then explicitly rank them — name the single one that creates the highest risk to the product if wrong, and say why it outranks the others. A gap list with no ranking gets the same critique twice in past cases; don't repeat it a third time.
 
-**SUGGESTED FORMAT** — table shape above, fill from the case.
+**SUGGESTED FORMAT** — table shape above, fill from the case. Research Gaps as two labeled groups (Must validate / Good to explore later), not one flat bullet list.
 
 **PRESSURE-TEST QUESTIONS**
 - Is your research aimed at the right thing for this case's mode (locating vs. finding)?
 - Did every interview answer the same closing question, and do the answers converge?
 - Does your confidence match your sample size? Label ASSUME honestly.
+- Can you name the ONE open question that, if it broke the wrong way, would break the product's core hypothesis? Is it visibly flagged as higher-priority than the others?
 
 ---
 
@@ -203,12 +212,14 @@ Turn findings into candidate opportunities, then pick ONE using a value-vs-effor
 
 **HOW TO BUILD IT**
 - Write each opportunity as one line: "FOR [who + need] THROUGH [wedge] BECAUSE [why the gap persists today]."
+- Before scoring anything, state in one sentence what Value and Effort each measure for this case (e.g. "Value = strength/frequency of the pain signal in research; Effort = build complexity within the sprint window") — a scale applied without this gets flagged in review even if every row has reasoning.
 - Use value/effort with T-shirt sizing (S/M/L). Break ties toward smaller effort given the sprint window.
 - The BECAUSE clause is the test — if you can't explain why the gap persists despite existing options, you haven't found the real opportunity.
 
 **EXAMPLE** — `ILLUSTRATIVE — derive your own` value-vs-effort table (Candidate | Value | Effort | Carry forward?).
 
 **PRESSURE-TEST QUESTIONS**
+- Have you stated what Value and Effort each measure, before the table — not just per-row reasoning after the fact?
 - Can you fill BECAUSE with evidence, or is it a guess dressed as a reason?
 - Did you prioritise on value ÷ effort and break ties toward the smaller build?
 - Who exactly is it FOR? A broad category is not a user — name the segment and the person.
@@ -237,6 +248,7 @@ The lock point. Commit to user, buyer, persona, problem statement, and scope. No
 - Have you named the primary user AND the buyer as different roles, or explicitly stated they're the same?
 - Does the confidence in your problem statement match the size of your evidence?
 - Is the scope locked and written down?
+- Does the problem statement stick to who has the problem, what it is, and why it matters — with any defense of its own validity ("why nobody solved this," "why it's really a health/business problem") moved to §7 or §4–§6 instead of crowding the statement itself? Past cases have hit both failure modes — missing justification entirely, and overloading the problem statement with it — so check for either.
 
 ---
 
@@ -253,7 +265,7 @@ Don't jump to the first idea. Put multiple solution directions on the table, wei
 **HOW TO BUILD IT**
 - Force divergence first — different shapes, not variants of one idea.
 - Evaluate on the same axes: user value, build effort, risk. Reuse the value÷effort discipline from §7.
-- Commit to one and say why the others lost.
+- Commit to one and say why the others lost — name the specific failure mode of each rejected direction, not just "weaker." Model precedent: the Whetstone/AI-work-feedback case rejected "curriculum-first" and "prompt-library" directions by naming exactly what each still failed to fix even in its strongest form, before naming why the chosen direction closed that gap.
 - Draw the flow as an ordered list or boxes-and-arrows. Every §10 feature must trace back to a step here.
 
 **EXAMPLE** — `ILLUSTRATIVE — derive your own` directions/trade-off table and today-vs-tomorrow flow table.
@@ -272,7 +284,7 @@ Detail the chosen flow: every feature, edge cases, information architecture, and
 **WHAT THIS SECTION COVERS**
 - Full feature list mapped to the §9 flow.
 - Product-value classification: must-haves, performance benefits, delighters.
-- Edge cases and failure states.
+- **Feature-level flow & failure states (required, every feature in the catalogue)**: for each feature, not just the must-haves — Trigger → Steps → Success state → Failure/edge states → trust/safety note. A feature list without this reads as a capability inventory, not a spec — this was the single most-repeated critique in past cases (three separate comments on one solution section).
 - Information architecture.
 - The MVP cut: V1 (this sprint), V1.1/V1.2 (deferred), with explicit non-goals.
 
@@ -280,16 +292,17 @@ Detail the chosen flow: every feature, edge cases, information architecture, and
 - List features as user-facing capabilities, not screens. Tie each to a §9 flow step.
 - Sort with the product-value template. MVP = must-haves + one shippable delighter.
 - Prioritise on value÷effort and versioning — V1 is the thinnest slice that delivers the core outcome.
-- Write edge cases as "When X, the product does Y."
+- For each feature, write the block: **Trigger** (what starts it) → **Steps** (the user-visible sequence) → **Success state** (what "worked" looks like) → **Failure/edge states** ("When X, the product does Y" — cover at minimum: no data/empty state, invalid input, and a timing/concurrency edge if relevant) → **Trust/safety note** (privacy, moderation, or fairness implication, if any). Don't stop at "edge cases exist" — name them and state the product's behavior for each.
 - Sketch the IA as a tree or screen map.
 
-**EXAMPLE** — `ILLUSTRATIVE — derive your own` feature/MVP-cut table.
+**EXAMPLE** — `ILLUSTRATIVE — derive your own` feature/MVP-cut table, plus one fully-worked Trigger→Steps→Success→Failure block to show the expected depth.
 
 **PRESSURE-TEST QUESTIONS**
 - Does every feature trace to a §9 flow step and a real user need?
 - Is your V1 truly the thinnest slice — or did comfort features sneak in?
-- For your top three edge cases, can you state exactly what the product does?
+- For EVERY feature — not just the top three — can you state its trigger, its success state, and at least one named failure/edge state with the product's exact behavior?
 - Can you name three things you are deliberately NOT building, and why?
+- If a stranger read only this section, could they tell how the product behaves when something goes wrong — or only when everything goes right?
 
 ---
 
@@ -343,7 +356,7 @@ Analytics isn't a slide — it's wired into the product. Define the metrics stac
 - Split leading (predict) vs. lagging (confirm) metrics — always a ratio with a denominator, never a raw count.
 - Name the activation metric — the aha moment.
 - Design events with FEW event names and RICH properties.
-- Apply the "So What" / removal test — cut vanity metrics.
+- Apply the "So What" / removal test — cut vanity metrics. Model precedent: the Whetstone/AI-work-feedback case's North Star ("Artifact Improvement Reach") paired a so-what test ("does this have a direct, defensible consequence for the product's actual thesis") with a removal test ("if you removed the ability for work to get better, does this number go to zero") — hold every North Star candidate to both, not just one.
 
 **EXAMPLE** — `ILLUSTRATIVE — derive your own` metrics-stack table and event-tracking sheet.
 
